@@ -6,6 +6,6 @@
 import scrapy
 
 
-class KeywordDetectorItem(scrapy.Item):
+class GravlingItem(scrapy.Item):
     text = scrapy.Field()
     url = scrapy.Field()

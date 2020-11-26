@@ -1,4 +1,4 @@
-# Scrapy settings for keyword_detector project
+# Scrapy settings for gravling project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'keyword_detector'
+BOT_NAME = 'gravling'
 
-SPIDER_MODULES = ['keyword_detector.spiders']
-NEWSPIDER_MODULE = 'keyword_detector.spiders'
+SPIDER_MODULES = ['gravling.spiders']
+NEWSPIDER_MODULE = 'gravling.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'keyword_detector (+http://www.yourdomain.com)'
+#USER_AGENT = 'gravling (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -45,13 +45,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'keyword_detector.middlewares.KeywordDetectorSpiderMiddleware': 543,
+#    'gravling.middlewares.GravlingSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'keyword_detector.middlewares.KeywordDetectorDownloaderMiddleware': 543,
+#    'gravling.middlewares.GravlingDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +63,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'keyword_detector.pipelines.KeywordDetectorPipeline': 300,
+#    'gravling.pipelines.GravlingPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

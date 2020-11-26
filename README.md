@@ -1,6 +1,11 @@
-# Keyword Detector
+# Grävling
 
-This is a tool that helps you identify strings on a website and build reports.
+Grävling is a web crawler that lets you search for terms across a website and saves them as a report in a format of your choosing.
+
+## Features
+- Search through human readable text
+- Search page markup
+- Get reports as either csv, json or xml
 
 ## Requirements
 
@@ -20,7 +25,7 @@ pip install -r requirements.txt
 This command will scrape all pages in the sitemap and return the matching text and the url where text was found. By default it will only search the human readable text.
 
 ```bash
-cd keyword_detector
+cd gravling
 scrapy crawl sitemap -o matches.csv -a url=https://client.test/sitemap.xml -a keywords="Lynx"
 ```
 
@@ -37,7 +42,7 @@ Tomorrow. Lynx browser is,https://example.com/about
 This command will only search page source markup and return any matches it finds.
 
 ```bash
-cd keyword_detector
+cd gravling
 scrapy crawl sitemap -o matches.csv -a url=https://client.test/sitemap.xml -a keywords="Lynx" -a search_html=1 -a search_text=0
 ```
 

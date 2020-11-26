@@ -9,6 +9,6 @@ from itemadapter import ItemAdapter
 
 
 
-class KeywordDetectorPipeline:
+class GravlingPipeline:
     def process_item(self, item, spider):
         return item

@@ -8,10 +8,10 @@ from scrapy.http import Request
 from scrapy.spiders import SitemapSpider, Rule
 from scrapy.item import Item
 
-from keyword_detector import items
+from gravling import items
 
 
-class KeywordDetectorSitemapSpider(SitemapSpider):
+class GravlingSitemapSpider(SitemapSpider):
     name = "sitemap"
 
     def __init__(self, url=None, keywords=None, search_text="1", search_html="0"):
@@ -55,7 +55,7 @@ class KeywordDetectorSitemapSpider(SitemapSpider):
 
         for match in matches:
             match = match.replace('\n','')
-            yield items.KeywordDetectorItem(text=match, url=response.url)
+            yield items.GravlingItem(text=match, url=response.url)
 
 
 def extract_terms_and_context_from_text(needle, text):
