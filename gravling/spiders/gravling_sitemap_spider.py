@@ -1,6 +1,4 @@
 import re
-from io import StringIO
-from functools import partial
 
 from bs4 import BeautifulSoup
 import scrapy
