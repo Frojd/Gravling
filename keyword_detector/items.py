@@ -7,6 +7,5 @@ import scrapy
 
 
 class KeywordDetectorItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    text = scrapy.Field()
+    url = scrapy.Field()

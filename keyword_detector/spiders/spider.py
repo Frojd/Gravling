@@ -8,15 +8,7 @@ from scrapy.http import Request
 from scrapy.spiders import SitemapSpider, Rule
 from scrapy.item import Item
 
-
-class MatchItem(scrapy.Item):
-    text = scrapy.Field()
-    url = scrapy.Field()
-
-
-def find_all_substrings(string, sub):
-    starts = [match.start() for match in re.finditer(re.escape(sub), string)]
-    return starts
+from keyword_detector import items
 
 
 def extract_terms_and_context_from_text(needle, text):
@@ -61,4 +53,4 @@ class WebsiteSpider(SitemapSpider):
 
         for match in matches:
             match = match.replace('\n','')
-            yield MatchItem(text=match, url=response.url)
+            yield items.KeywordDetectorItem(text=match, url=response.url)
