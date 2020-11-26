@@ -5,6 +5,7 @@ Grävling is a web crawler that lets you search for terms across a website and s
 ## Features
 - Search through human readable text
 - Search page markup
+- Supports both crawling by sitemap of by following links
 - Get reports as either csv, json or xml
 
 ## Requirements
@@ -52,6 +53,22 @@ Will generate a list that looks like this:
 text,url
 orrow. <b>Lynx</b> brows,https://example.com/credits
 . <strong>Lynx</strong> ,https://example.com/unix
+```
+
+
+### Gather urls for pages that contains a certain text by following links
+
+```bash
+cd gravling
+scrapy crawl website -o matches.csv -a domain=lynx.browser.org -a keywords="lynx Lynx"
+```
+
+Will generate a list that looks like this:
+
+```csv
+text,url
+ write to lynx-dev@nongn,https://lynx.browser.org
+d by  web@lynx.browser.o,https://lynx.browser.org
 ```
 
 ## Security
