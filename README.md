@@ -21,7 +21,7 @@ This command will scrape all pages in the sitemap and return the matching text a
 
 ```bash
 cd keyword_detector
-scrapy crawl sitemap -o matches.csv -a sitemap_url=https://client.test/sitemap.xml -a keywords="Lynx"
+scrapy crawl sitemap -o matches.csv -a url=https://client.test/sitemap.xml -a keywords="Lynx"
 ```
 
 Will generate a list that looks like this:
@@ -38,7 +38,7 @@ This command will only search page source markup and return any matches it finds
 
 ```bash
 cd keyword_detector
-scrapy crawl sitemap -o matches.csv -a sitemap_url=https://client.test/sitemap.xml -a keywords="Lynx" -a search_html=1 -a search_text=0
+scrapy crawl sitemap -o matches.csv -a url=https://client.test/sitemap.xml -a keywords="Lynx" -a search_html=1 -a search_text=0
 ```
 
 Will generate a list that looks like this:

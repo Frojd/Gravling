@@ -14,12 +14,10 @@ from keyword_detector import items
 class KeywordDetectorSitemapSpider(SitemapSpider):
     name = "sitemap"
 
-    def __init__(self, sitemap_url=None, keywords=None, search_text="1", search_html="0"):
+    def __init__(self, url=None, keywords=None, search_text="1", search_html="0"):
         super().__init__()
 
-        print(keywords)
-
-        self.sitemap_urls = [sitemap_url]
+        self.sitemap_urls = [url]
         self.keywords = keywords.split()
 
         self.search_text = search_text == "1"
